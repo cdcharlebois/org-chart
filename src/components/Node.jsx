@@ -12,7 +12,7 @@ export const Node = props => {
     const _renderChildrenTreeNodes = children =>
         children.map(item => (
             //Make a Node out of every child passed to this method
-            <Node onDrag={onDrag} onDrop={onDrop} node={node} item={item} toggleOpen={toggleOpen} isOpen={isOpen} />
+            <Node key={item.id} onDrag={onDrag} onDrop={onDrop} node={node} item={item} toggleOpen={toggleOpen} isOpen={isOpen} />
         ));
 
     //Define hasChildren
